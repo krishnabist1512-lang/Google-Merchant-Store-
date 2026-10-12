@@ -128,7 +128,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   <h3 className="font-heading font-bold text-xl text-white">Debug Mode Heavyweight Hoodie</h3>
                   <p className="text-xs text-white/80 mt-1">480 GSM Double-Fleece · Internal Media Routing</p>
                   <div className="mt-3 flex items-center justify-between">
-                    <span className="text-lg font-bold font-heading tabular-nums">{formatPrice(3299)}</span>
+                    <span className="text-lg font-bold font-heading tabular-nums">₹3,299</span>
                     <button
                       onClick={() => onNavigate('/product/debug-mode-heavyweight-hoodie')}
                       className="px-4 py-1.5 rounded-full bg-white text-slate-900 text-xs font-bold hover:bg-[#2F6BFF] hover:text-white transition-colors"
