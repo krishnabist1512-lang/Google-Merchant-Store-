@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Layer – Tech Lifestyle Merchandise Store</title>
+    <meta name="description" content="Conversion-focused, mobile-first merchandise store inspired by the Google Merchandise Store, featuring personalized discovery, seamless checkout, and GA4 tracking." />
+    <meta name="theme-color" content="#FAFAF8" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Layer – Tech Lifestyle Merchandise Store" />
+    <meta property="og:description" content="Conversion-focused, mobile-first merchandise store inspired by the Google Merchandise Store, featuring personalized discovery, seamless checkout, and GA4 tracking." />
+    <meta property="og:site_name" content="Layer Store" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Layer – Tech Lifestyle Merchandise Store" />
+    <meta name="twitter:description" content="Conversion-focused, mobile-first merchandise store inspired by the Google Merchandise Store, featuring personalized discovery, seamless checkout, and GA4 tracking." />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Layer",
+      "description": "Wear your tech. Premium merchandise and lifestyle apparel engineered for daily focus and tactile comfort.",
+      "url": "https://layer-store.vercel.app",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR, USD"
+    }
+    </script>
+
+    <!-- Google Analytics (GA4) with dynamic measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LAYERDEMO01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      // Config will be called with dynamic ID from analytics.ts if provided
+      gtag('config', 'G-LAYERDEMO01', { send_page_view: false });
+    </script>
+  </head>
+  <body class="bg-[#FAFAF8] text-[#1B1D21] font-sans antialiased selection:bg-[#2F6BFF] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

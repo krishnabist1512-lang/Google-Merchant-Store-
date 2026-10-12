@@ -1,0 +1,6 @@
+{
+  "name": "Layer – Tech Lifestyle Merchandise Store",
+  "description": "Conversion-focused, mobile-first merchandise store inspired by the Google Merchandise Store, featuring personalized discovery, seamless checkout, and GA4 tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
