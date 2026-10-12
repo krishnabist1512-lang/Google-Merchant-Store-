@@ -1,9 +1,14 @@
+  import heroApparel from '../assets/images/hero_layer_apparel_1791797302270.jpg';
+import campaignLayerUp from '../assets/images/campaign_layer_up_1791797322909.jpg';
+import categoryApparel from '../assets/images/category_apparel_1791797342916.jpg';
+import categoryLifestyle from '../assets/images/category_lifestyle_1791797365416.jpg';
+
 // Image assets generated via generate_image tool
 export const AI_IMAGES = {
-  heroApparel: '/src/assets/images/hero_layer_apparel_1791797302270.jpg',
-  campaignLayerUp: '/src/assets/images/campaign_layer_up_1791797322909.jpg',
-  categoryApparel: '/src/assets/images/category_apparel_1791797342916.jpg',
-  categoryLifestyle: '/src/assets/images/category_lifestyle_1791797365416.jpg',
+  heroApparel,
+  campaignLayerUp,
+  categoryApparel,
+  categoryLifestyle,
 };
 
 /**
