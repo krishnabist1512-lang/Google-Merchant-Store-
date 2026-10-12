@@ -97,8 +97,16 @@ export const ShopPage: React.FC<ShopPageProps> = ({
       }
       return true;
     }).sort((a, b) => {
-      if (sortBy === 'popular') return (b.reviewCount ?? 128) - (a.reviewCount ?? 128);
-      if (sortBy === 'newest') return (b.flags?.new ? 1 : 0) - (a.flags?.new ? 1 : 0);
+     if (sortBy === 'popular') {
+  const scoreA = (a.flags?.bestSeller ? 50 : 0) + (a.rating || 4.5) * 10 + (a.price > 25 ? 20 : 0);
+  const scoreB = (b.flags?.bestSeller ? 50 : 0) + (b.rating || 4.5) * 10 + (b.price > 25 ? 20 : 0);
+  return scoreB - scoreA;
+}
+if (sortBy === 'newest') {
+  const isNewA = a.flags?.new || a.flags?.limited ? 100 : 0;
+  const isNewB = b.flags?.new || b.flags?.limited ? 100 : 0;
+  return (isNewB - isNewA) || (b.name.localeCompare(a.name));
+}
       if (sortBy === 'price-asc') return a.price - b.price;
       if (sortBy === 'price-desc') return b.price - a.price;
       // Recommended: score bestSeller and rating
