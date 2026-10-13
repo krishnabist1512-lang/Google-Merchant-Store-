@@ -182,14 +182,13 @@ export const StoreProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     setCurrencyState(c);
   };
 
-  const formatPrice = (amount: number): string => {
-    if (currency === 'INR') {
-      const inrVal = Math.round(amount * 83);
-      return `₹${inrVal.toLocaleString('en-IN')}`;
+const formatPrice = (amount: number): string => {
+    if (currency === 'USD') {
+      const usdVal = amount / 83.3;
+      return `$${usdVal.toFixed(2)}`;
     }
-    return `$${amount.toFixed(2)}`;
+    return `₹${Math.round(amount).toLocaleString('en-IN')}`;
   };
-
   // Cart Calculations
   const cartSubtotal = useMemo(() => {
     return cart.reduce((sum, item) => sum + item.unitPrice * item.quantity, 0);
